@@ -5,7 +5,6 @@ import React , { Component }from 'react';
 import { Provider } from 'react-redux';
 import store from '../store/store';
 import Home from './home';
-import Containers from './containers';
 import {
     AppRegistry,
     StyleSheet,
@@ -21,7 +20,7 @@ class NewsTabScreen extends React.Component{
     render() {
         return (
             <Provider store={store}>
-                <Containers/>
+                <Home/>
             </Provider>
             // <View style={styles.container}>
             //     <KeyboardAvoidingView behavior="padding" style={styles.container}>

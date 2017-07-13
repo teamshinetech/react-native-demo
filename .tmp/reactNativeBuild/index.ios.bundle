@@ -6057,7 +6057,7 @@ __d(/* Promise */function(global, require, module, exports) {
 
 var Promise = require(51                       ); // 51 = fbjs/lib/Promise.native
 
-var prettyFormat = require(55             ); // 55 = pretty-format
+var prettyFormat = require(476            ); // 476 = pretty-format
 
 if (__DEV__) {
   require(57                                       ).enable({ // 57 = promise/setimmediate/rejection-tracking
@@ -6398,7 +6398,7 @@ Promise.prototype.done = function (onFulfilled, onRejected) {
 }, 54, null, "promise/setimmediate/done.js");
 __d(/* pretty-format/index.js */function(global, require, module, exports) {'use strict';
 
-var printString = require(56             ); // 56 = ./printString
+var printString = require(477            ); // 477 = ./printString
 
 var toString = Object.prototype.toString;
 var toISOString = Date.prototype.toISOString;
@@ -6738,7 +6738,7 @@ function prettyFormat(val, opts) {
 }
 
 module.exports = prettyFormat;
-}, 55, null, "pretty-format/index.js");
+}, 476, null, "pretty-format/index.js");
 __d(/* pretty-format/printString.js */function(global, require, module, exports) {'use strict';
 
 var ESCAPED_CHARACTERS = /(\\|\"|\')/g;
@@ -6746,7 +6746,7 @@ var ESCAPED_CHARACTERS = /(\\|\"|\')/g;
 module.exports = function printString(val) {
   return val.replace(ESCAPED_CHARACTERS, '\\$1');
 };
-}, 56, null, "pretty-format/printString.js");
+}, 477, null, "pretty-format/printString.js");
 __d(/* promise/setimmediate/rejection-tracking.js */function(global, require, module, exports) {'use strict';
 
 var Promise = require(53      ); // 53 = ./core
@@ -15041,7 +15041,7 @@ module.exports = getDevServer;
 __d(/* fetch */function(global, require, module, exports) {
 'use strict';
 
-require(125           ); // 125 = whatwg-fetch
+require(478           ); // 478 = whatwg-fetch
 
 module.exports = { fetch: fetch, Headers: Headers, Request: Request, Response: Response };
 }, 124, null, "fetch");
@@ -15504,7 +15504,7 @@ __d(/* whatwg-fetch/fetch.js */function(global, require, module, exports) {(func
   };
   self.fetch.polyfill = true;
 })(typeof self !== 'undefined' ? self : this);
-}, 125, null, "whatwg-fetch/fetch.js");
+}, 478, null, "whatwg-fetch/fetch.js");
 __d(/* ReactNativeFiberHostComponent */function(global, require, module, exports) {
 
 'use strict';
@@ -15763,7 +15763,7 @@ defineProperty(global, 'Promise', function () {
 
 defineProperty(global, 'regeneratorRuntime', function () {
   delete global.regeneratorRuntime;
-  require(146                          ); // 146 = regenerator-runtime/runtime
+  require(479                          ); // 479 = regenerator-runtime/runtime
   return global.regeneratorRuntime;
 });
 
@@ -17382,7 +17382,7 @@ __d(/* regenerator-runtime/runtime.js */function(global, require, module, export
     }
   };
 }(typeof global === "object" ? global : typeof window === "object" ? window : typeof self === "object" ? self : this);
-}, 146, null, "regenerator-runtime/runtime.js");
+}, 479, null, "regenerator-runtime/runtime.js");
 __d(/* XMLHttpRequest */function(global, require, module, exports) {
 'use strict';
 
@@ -57541,10 +57541,6 @@ var _home = require(461     ); // 461 = ./home
 
 var _home2 = babelHelpers.interopRequireDefault(_home);
 
-var _containers = require(463           ); // 463 = ./containers
-
-var _containers2 = babelHelpers.interopRequireDefault(_containers);
-
 var _reactNative = require(27            ); // 27 = react-native
 
 var NewsTabScreen = function (_React$Component) {
@@ -57562,13 +57558,13 @@ var NewsTabScreen = function (_React$Component) {
                 _reactRedux.Provider,
                 { store: _store2.default, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 23
+                        lineNumber: 22
                     }
                 },
-                _react2.default.createElement(_containers2.default, {
+                _react2.default.createElement(_home2.default, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 24
+                        lineNumber: 23
                     }
                 })
             );
@@ -60026,382 +60022,6 @@ exports.increase = increase;
 exports.decrease = decrease;
 exports.reset = reset;
 }, 462, null, "RNDemo/src/actions/actions.js");
-__d(/* RNDemo/src/screens/containers.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/zhuhuiping/WebstormProjects/RNDemo/src/screens/containers.js';
-
-var _react = require(13     ); // 13 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _reactRedux = require(418          ); // 418 = react-redux
-
-var _todoActions = require(464                     ); // 464 = ../actions/todoActions
-
-var _actionsTypes = require(458              ); // 458 = ../actionsTypes
-
-var _AddTodo = require(465        ); // 465 = ./AddTodo
-
-var _AddTodo2 = babelHelpers.interopRequireDefault(_AddTodo);
-
-var _TodoList = require(466         ); // 466 = ./TodoList
-
-var _TodoList2 = babelHelpers.interopRequireDefault(_TodoList);
-
-var _Footer = require(468       ); // 468 = ./Footer
-
-var _Footer2 = babelHelpers.interopRequireDefault(_Footer);
-
-var Containers = function (_Component) {
-    babelHelpers.inherits(Containers, _Component);
-
-    function Containers() {
-        babelHelpers.classCallCheck(this, Containers);
-        return babelHelpers.possibleConstructorReturn(this, (Containers.__proto__ || Object.getPrototypeOf(Containers)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(Containers, [{
-        key: 'render',
-        value: function render() {
-            var _props = this.props,
-                dispatch = _props.dispatch,
-                visibleTodos = _props.visibleTodos,
-                visibilityFilter = _props.visibilityFilter;
-
-            return _react2.default.createElement(
-                'div',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 16
-                    }
-                },
-                _react2.default.createElement(_AddTodo2.default, { onAddClick: function onAddClick(text) {
-                        return dispatch((0, _todoActions.addTodo)(text));
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 17
-                    }
-                }),
-                _react2.default.createElement(_TodoList2.default, { todos: visibleTodos, onTodoClick: function onTodoClick(index) {
-                        return dispatch((0, _todoActions.completeTodo)(index));
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 18
-                    }
-                }),
-                _react2.default.createElement(_Footer2.default, { filter: visibilityFilter, onFilterChange: function onFilterChange(nextFilter) {
-                        return dispatch((0, _todoActions.setVisibilityFilter)(nextFilter));
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 19
-                    }
-                })
-            );
-        }
-    }]);
-    return Containers;
-}(_react.Component);
-
-Containers.propTypes = {
-    visibleTodos: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-        text: _react.PropTypes.string.isRequired,
-        completed: _react.PropTypes.bool.isRequired
-    }).isRequired).isRequired,
-    visibilityFilter: _react.PropTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED', 'SHOW_ACTIVE']).isRequired
-};
-
-function selectTodos(todos, filter) {
-    switch (filter) {
-        case _actionsTypes.VisibilityFilters.SHOW_ALL:
-            return todos;
-        case _actionsTypes.VisibilityFilters.SHOW_COMPLETED:
-            return todos.filter(function (todo) {
-                return todo.completed;
-            });
-        case _actionsTypes.VisibilityFilters.SHOW_ACTIVE:
-            return todos.filter(function (todo) {
-                return !todo.completed;
-            });
-    }
-}
-function select(state) {
-    return {
-        visibleTodos: selectTodos(state.todos, state.visibilityFilter),
-        visibilityFilter: state.visibilityFilter
-    };
-}
-exports.default = (0, _reactRedux.connect)(select)(Containers);
-}, 463, null, "RNDemo/src/screens/containers.js");
-__d(/* RNDemo/src/actions/todoActions.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.addTodo = addTodo;
-exports.completeTodo = completeTodo;
-exports.setVisibilityFilter = setVisibilityFilter;
-
-var _actionsTypes = require(458              ); // 458 = ../actionsTypes
-
-function addTodo(text) {
-    return { type: _actionsTypes.ADD_TODO, text: text };
-}
-function completeTodo(index) {
-    return { type: _actionsTypes.COMPLETE_TODO, index: index };
-}
-function setVisibilityFilter(filter) {
-    return { type: _actionsTypes.SET_VISIBILITY_FILTER, filter: filter };
-}
-}, 464, null, "RNDemo/src/actions/todoActions.js");
-__d(/* RNDemo/src/screens/AddTodo.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/zhuhuiping/WebstormProjects/RNDemo/src/screens/AddTodo.js';
-
-var _react = require(13     ); // 13 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var AddTodo = function (_Component) {
-    babelHelpers.inherits(AddTodo, _Component);
-
-    function AddTodo() {
-        babelHelpers.classCallCheck(this, AddTodo);
-        return babelHelpers.possibleConstructorReturn(this, (AddTodo.__proto__ || Object.getPrototypeOf(AddTodo)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(AddTodo, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            return _react2.default.createElement(
-                'div',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 9
-                    }
-                },
-                _react2.default.createElement('input', { type: 'text', ref: 'input', __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 10
-                    }
-                }),
-                _react2.default.createElement(
-                    'button',
-                    { onClick: function onClick(e) {
-                            return _this2.handleClick(e);
-                        }, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 11
-                        }
-                    },
-                    'Add'
-                )
-            );
-        }
-    }, {
-        key: 'handleClick',
-        value: function handleClick(e) {
-            var node = this.refs.input;
-            var text = node.value.trim();
-            this.props.onAddClick(text);
-            node.value = '';
-        }
-    }]);
-    return AddTodo;
-}(_react.Component);
-
-exports.default = AddTodo;
-
-
-AddTodo.propTypes = {
-    onAddClick: _react.PropTypes.func.isRequired
-};
-}, 465, null, "RNDemo/src/screens/AddTodo.js");
-__d(/* RNDemo/src/screens/TodoList.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/zhuhuiping/WebstormProjects/RNDemo/src/screens/TodoList.js';
-
-var _react = require(13     ); // 13 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _Todo = require(467     ); // 467 = ./Todo
-
-var _Todo2 = babelHelpers.interopRequireDefault(_Todo);
-
-var TodoList = function (_Component) {
-    babelHelpers.inherits(TodoList, _Component);
-
-    function TodoList() {
-        babelHelpers.classCallCheck(this, TodoList);
-        return babelHelpers.possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(TodoList, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            return _react2.default.createElement(
-                'ul',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 10
-                    }
-                },
-                this.props.todos.map(function (todo, index) {
-                    return _react2.default.createElement(_Todo2.default, babelHelpers.extends({}, todo, {
-                        key: index,
-                        onClick: function onClick() {
-                            return _this2.props.onTodoClick(index);
-                        }, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 12
-                        }
-                    }));
-                })
-            );
-        }
-    }]);
-    return TodoList;
-}(_react.Component);
-
-exports.default = TodoList;
-
-
-TodoList.propTypes = {
-    onTodoClick: _react.PropTypes.func.isRequired,
-    todos: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-        text: _react.PropTypes.string.isRequired,
-        completed: _react.PropTypes.bool.isRequired
-    }).isRequired).isRequired
-};
-}, 466, null, "RNDemo/src/screens/TodoList.js");
-__d(/* RNDemo/src/screens/Todo.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/zhuhuiping/WebstormProjects/RNDemo/src/screens/Todo.js';
-
-var _react = require(13     ); // 13 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var Todo = function (_Component) {
-    babelHelpers.inherits(Todo, _Component);
-
-    function Todo() {
-        babelHelpers.classCallCheck(this, Todo);
-        return babelHelpers.possibleConstructorReturn(this, (Todo.__proto__ || Object.getPrototypeOf(Todo)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(Todo, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'li',
-                {
-                    onClick: this.props.onClick,
-                    style: {
-                        textDecoration: this.props.completed ? 'line-through' : 'none',
-                        cursor: this.props.completed ? 'default' : 'pointer'
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 9
-                    }
-                },
-                this.props.text
-            );
-        }
-    }]);
-    return Todo;
-}(_react.Component);
-
-exports.default = Todo;
-
-
-Todo.propTypes = {
-    onClick: _react.PropTypes.func.isRequired,
-    text: _react.PropTypes.string.isRequired,
-    completed: _react.PropTypes.bool.isRequired
-};
-}, 467, null, "RNDemo/src/screens/Todo.js");
-__d(/* RNDemo/src/screens/Footer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var _jsxFileName = '/Users/zhuhuiping/WebstormProjects/RNDemo/src/screens/Footer.js';
-
-var _react = require(13     ); // 13 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var Footer = function (_Component) {
-    babelHelpers.inherits(Footer, _Component);
-
-    function Footer() {
-        babelHelpers.classCallCheck(this, Footer);
-        return babelHelpers.possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(Footer, [{
-        key: 'renderFilter',
-        value: function renderFilter(filter, name) {
-            var _this2 = this;
-
-            if (filter === this.props.filter) {
-                return name;
-            }
-
-            return _react2.default.createElement(
-                'a',
-                { href: '#', onClick: function onClick(e) {
-                        e.preventDefault();
-                        _this2.props.onFilterChange(filter);
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 13
-                    }
-                },
-                name
-            );
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'p',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 24
-                    }
-                },
-                'Show:',
-                ' ',
-                this.renderFilter('SHOW_ALL', 'All'),
-                ', ',
-                this.renderFilter('SHOW_COMPLETED', 'Completed'),
-                ', ',
-                this.renderFilter('SHOW_ACTIVE', 'Active'),
-                '.'
-            );
-        }
-    }]);
-    return Footer;
-}(_react.Component);
-
-exports.default = Footer;
-
-
-Footer.propTypes = {
-    onFilterChange: _react.PropTypes.func.isRequired,
-    filter: _react.PropTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED', 'SHOW_ACTIVE']).isRequired
-};
-}, 468, null, "RNDemo/src/screens/Footer.js");
 __d(/* RNDemo/src/screens/MoreTabScreen.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });

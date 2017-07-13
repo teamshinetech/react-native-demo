@@ -7,7 +7,7 @@ import { INCREASE, DECREASE, RESET } from '../actionsTypes';
 const defaultState = {
     count: 5,
     factor: 1
-}
+};
 
 function counter(state = defaultState, action) {
     switch (action.type){
